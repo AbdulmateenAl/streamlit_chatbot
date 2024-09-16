@@ -1,8 +1,14 @@
 import streamlit as st
 import pandas as pd
+from scraper import create_table
 
 st.title("Here is my first streamlit app")
-st.write(pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
-}))
+
+st.text_input("Your name", key="name")
+url = st.session_state.name
+
+if url:
+    movies = create_table(url)
+
+    df = pd.DataFrame(movies, columns=['title'])
+    df
