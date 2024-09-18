@@ -11,4 +11,4 @@ if url:
     movies = create_table(url)
 
     df = pd.DataFrame(movies, columns=['title'])
-    df
+    st.table(df)
