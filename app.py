@@ -7,7 +7,7 @@ from langchain_ollama.llms import OllamaLLM
 from PyPDF2 import PdfReader
 
 
-st.title("Here is my first streamlit app")
+st.title("Whatever AI")
 
 pdf_texts = "" # stores all text in pdf
 
